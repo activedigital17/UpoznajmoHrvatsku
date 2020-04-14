@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Upoznajmo Hrvatsku</string>
+    <string name="start">Start</string>
+    <string name="ime">Ime</string>
+    <string name="upi_i_svoje_ime">Upiši svoje ime</string>
+</resources>
