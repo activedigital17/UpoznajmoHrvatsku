@@ -1,5 +1,6 @@
 package com.quizapp
 
+import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.LightingColorFilter
@@ -20,6 +21,8 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
     private var mQuestionList:ArrayList<Questions>? = null
     private var mSelectedOptionPosition:Int = 0
     private var mCorrectAnswers: Int = 0
+
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -87,10 +90,13 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                             setQuestion()
                         }else->{
 
+
+
                         val intent = Intent(this,ResultActivity::class.java)
                         intent.putExtra(Constants.TOTAL_QUESTIONS,mQuestionList!!.size )
                         intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
                         startActivity(intent)
+                        finish()
                     }
 
                     }
