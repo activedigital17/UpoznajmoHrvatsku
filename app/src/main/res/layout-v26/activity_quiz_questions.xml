@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ic_bg"
+    android:background="@drawable/background"
     android:fillViewport="true"
     tools:context=".QuizQuestionsActivity">
 
@@ -18,19 +18,16 @@
         <TextView
             android:id="@+id/tv_question"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="200dp"
             android:layout_margin="5dp"
             android:autoSizeTextType="uniform"
             android:autoSizeMinTextSize="14sp"
             android:autoSizeMaxTextSize="28sp"
             android:autoSizeStepGranularity="2sp"
-            android:layout_weight="1"
             android:fontFamily="casual"
             android:gravity="center"
-            android:padding="1dp"
-            android:textColor="@android:color/white"
-
-            
+            android:background="@drawable/ic_question_box"
+            android:textColor="#555555"
             android:textStyle="bold"
             tools:text="Glavni grad Hrvatske?"
             android:text="Glavni grad Hrvatske"/>
@@ -47,10 +44,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:indeterminate="false"
-                android:max="4"
+                android:max="7"
                 android:minHeight="50dp"
-                android:progress="5"
-                android:progressTint="#FFFFFF" />
+                android:progress="7"
+                android:progressTint="#58adc5" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -58,11 +55,11 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="15dp"
-                android:textColor="@android:color/white"
-                android:textColorHint="#7a8089"
+                android:textColor="#555555"
+                android:textColorHint="#58adc5"
                 android:textSize="15sp"
-                android:text="5/10"
-                tools:text="5/10" />
+                android:text="5/7"
+                tools:text="5/7" />
 
 
         </LinearLayout>
@@ -76,7 +73,7 @@
             android:background="@drawable/default_options_bg"
             android:gravity="center"
             android:padding="15dp"
-            android:textColor="@android:color/black"
+            android:textColor="#7fc5d8"
             android:textSize="24sp"
             android:text="Zagreb"
             tools:text="Apple" />
@@ -89,7 +86,7 @@
             android:background="@drawable/default_options_bg"
             android:gravity="center"
             android:padding="15dp"
-            android:textColor="@android:color/black"
+            android:textColor="#7fc5d8"
             android:textSize="24sp"
             android:text="Apple"
             tools:text="Apple" />
@@ -102,7 +99,7 @@
             android:background="@drawable/default_options_bg"
             android:gravity="center"
             android:padding="15dp"
-            android:textColor="@android:color/black"
+            android:textColor="#7fc5d8"
             android:textSize="24sp"
             android:text="Zagreb"
             tools:text="Apple" />
@@ -115,21 +112,20 @@
             android:background="@drawable/default_options_bg"
             android:gravity="center"
             android:padding="15dp"
-            android:textColor="@android:color/black"
+            android:textColor="#7fc5d8"
             android:textSize="24sp"
             android:text="Zagreb"
             tools:text="Apple" />
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="15dp"
-            android:background="@drawable/submit_btn"
+            android:layout_height="50dp"
+            android:layout_margin="35dp"
+            android:background="@drawable/ic_potvrdi_button"
             android:gravity="center"
             android:padding="10dp"
             android:id="@+id/submit_btn"
             android:text="POTVRDI"
-
             android:textColor="@android:color/white"
             android:textSize="24sp"
             tools:text="POTVRDI" />

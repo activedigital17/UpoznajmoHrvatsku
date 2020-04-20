@@ -6,67 +6,95 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ResultActivity"
-    android:background="@drawable/background_1">
+    android:background="@drawable/background_romb">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
-        android:textSize="26sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
         android:layout_weight="1"
-        android:text="Čestitamo, završio si kviz!"
-        android:gravity="center"/>
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical">
 
-    <TextView
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Čestitamo,"
+            android:textColor="#555555"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="završio si kviz!"
+            android:textColor="#555555"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/correct_answers_display"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#58adc5"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            tools:text="fda" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
-        android:id="@+id/highscore_tv"
-        android:textSize="26sp"
-        android:layout_weight="0.5"
-        android:gravity="center"/>
+        android:orientation="vertical"
+        android:gravity="center_horizontal|center_vertical"
+        android:layout_weight="1">
 
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/black"
-        android:textSize="26sp"
-        tools:text="test"
-        android:layout_weight="0.3"
-        android:id="@+id/correct_answers_display"
-        android:gravity="center"/>
+        <TextView
+            android:id="@+id/highscore_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:gravity="center"
+            android:textColor="#58adc5"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            tools:text="test" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="PROMJENI IGRAČA"
-        android:textColor="@android:color/white"
+        android:textColor="#58adc5"
         android:textSize="24sp"
         android:id="@+id/resultFinish_btn"
         android:paddingLeft="40dp"
         android:paddingRight="40dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="40dp"
-        android:background="@drawable/submit_btn"
+        android:background="@drawable/default_options_bg"
         />
 
     <Button
         android:id="@+id/playAgain_btn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_gravity="center"
-        android:background="@drawable/submit_btn"
+        android:background="@drawable/ic_igraj_ponovno_button"
         android:paddingLeft="40dp"
         android:paddingRight="40dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:text="igraj ponovno"
         android:textColor="@android:color/white"
-        android:layout_marginBottom="100dp"
         android:textSize="24sp" />
 
-
+    </LinearLayout>
 </LinearLayout>

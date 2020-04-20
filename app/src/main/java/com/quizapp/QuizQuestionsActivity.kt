@@ -168,7 +168,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
         for (option in options){
 
-            option.setTextColor(Color.parseColor("#000000"))
+            option.setTextColor(Color.parseColor("#7fc5d8"))
             option.typeface = Typeface.DEFAULT
             option.background = ContextCompat.getDrawable(this,R.drawable.default_options_bg)
 

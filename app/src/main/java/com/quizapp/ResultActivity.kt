@@ -32,10 +32,10 @@ class ResultActivity : AppCompatActivity() {
         }
 
 
-        correct_answers_display.text = "Rezultat = $correctQuestions / $totalQuestions"
+        correct_answers_display.text = "Tvoj rezultat je: $correctQuestions/$totalQuestions"
 
 
-        highscore_tv.text = "Najbolji rezultat: ${sharedPreference.getValueInt("highscore")} "
+        highscore_tv.text = "${sharedPreference.getValueInt("highscore")}/$totalQuestions je tvoj najbolji rezultat, probaj ga sustići.  "
 
 
         resultFinish_btn.setOnClickListener() {

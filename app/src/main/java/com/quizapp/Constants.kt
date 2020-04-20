@@ -19,53 +19,83 @@ object Constants{
         //pitanja
         val q1 = Questions(
             1,
-            "Prije nego što krenemo, da ne bude baš da ignoriramo svih 428 općina, pitamo koja je od\n" +
-                    "njih najmnogoljudnija? Prema popisu iz 2001. ima 14.445 stanovnika, odnosno gotovo\n" +
-                    "13.500 više nego grad s najmanje stanovnika?",
-            "Opatija",
-            "Ozalj",
-            "Koprivnica",
-            "Viškovo",
-            4)
+            "Tko je bio prvi predsjednik Vlade nakon prvih demokratskih izbora 1990. godine?",
+            "Stipe Mesić",
+            "Milka Planinc",
+            "Gojko Šušak",
+            "Nikica Valentić",
+            1)
 
         //dodajemo pitanja na Arraylistu
         questionList.add(q1)
 
         val q2 = Questions(
             2,
-            "Od Ante Starčevića do Nikole Tesle, na širem području ovog grada rođeni su mnogi\n" +
-                    "velikani, što nije ni čudno, jer prostire se na površini većoj od Pariza!\n",
-            "Pakrac",
-            "Slatina",
-            "Gospić",
-            "Bakar",
-            3)
+            "Koliko je zlatnih olimpijskih medalja osvojila Janica Kostelić?",
+            "Dvije",
+            "Četiri",
+            "Šest",
+            "Osam",
+            2)
 
         questionList.add(q2)
 
 
         val q3 = Questions(
             3,
-            "Bura živi u Rijeci, umire u Trstu, a gdje se rađa? ",
-            "Varaždin",
-            "Ozalj",
-            "Ozalj",
-            "Senj",
-            4)
+            "Kada je uvedena hrvatska valuta kuna? ",
+            "1990. godine",
+            "1992. godine",
+            "1994. godine",
+            "1995. godine",
+            3)
 
         questionList.add(q3)
 
         val q4 = Questions(
             4,
-            "U središtu kojeg hrvatskog grada se nalaze koncentrični krugovi s natpisom Centrum\n" +
-                    "Mundi?\n",
-            "Ludbreg",
-            "Belišće",
-            "Imotski",
-            "Rovinj",
+            "Tko je izrekao: Tko je jamio - jamio, što najbolje opisuje hrvatsku privatizaciju?",
+            "Ljubo Ćesić Rojs",
+            "Marin Jurjević Baja",
+            "Ante Čičin Šain",
+            "Ljubo Jurčić",
             1)
 
         questionList.add(q4)
+
+        val q5 = Questions(
+            5,
+            "Koja je država prva priznala Hrvatsku?",
+            "Velika Britanija",
+            "Island",
+            "Njemačka",
+            "Vatikan",
+            3)
+
+        questionList.add(q5)
+
+
+        val q6 = Questions(
+            6,
+            "Koji je hrvatski film najgledaniji?",
+            "Kako je počeo rat na mom otoku",
+            "Duga mračna noć",
+            "Ajmo, žuti",
+            "Kapelski kresovi",
+            1)
+
+        questionList.add(q6)
+
+        val q7 = Questions(
+            7,
+            "Koliko je puta Franjo Tuđman pobijedio na predsjedničkim izborima?",
+            "Jednom",
+            "Dva puta",
+            "Tri puta",
+            "Nikada",
+            2)
+
+        questionList.add(q7)
 
 
 
