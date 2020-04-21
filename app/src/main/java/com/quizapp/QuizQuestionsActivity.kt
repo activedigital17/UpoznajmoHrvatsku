@@ -203,6 +203,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
         }
 
+        progress_bar.max = mQuestionList!!.size
         progress_bar.progress = mCurrentPosition
         tv_progress_text.text = "$mCurrentPosition / ${mQuestionList!!.size}"
         tv_question.text = question.question
@@ -220,6 +221,8 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         options.add(1,option_two)
         options.add(2, option_three)
         options.add(3,option_four)
+
+
 
 
         for (option in options){

@@ -44,9 +44,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:indeterminate="false"
-                android:max="7"
+                android:max="5"
                 android:minHeight="50dp"
-                android:progress="7"
+                android:progress="5"
                 android:progressTint="#58adc5" />
 
             <TextView
