@@ -98,6 +98,120 @@ object Constants{
         questionList.add(q7)
 
 
+        val q8 = Questions(
+            8,
+            "Tko je najpopularniji i najpoznatiji hrvatski znanstvenik?",
+            "Miroslav Radman",
+            "Anto Đapić",
+            "Dragan Primorac",
+            "Ivan Đikić",
+            1)
+
+        questionList.add(q8)
+
+
+        val q9 = Questions(
+            9,
+            "Koliko je puta papa Ivan Pavao II. bio u Hrvatskoj",
+            "Jednom",
+            "Tri puta",
+            "Pet puta",
+            "Nikada",
+            2)
+
+        questionList.add(q9)
+
+
+        val q10 = Questions(
+            10,
+            "Gdje je rođen zagrebački gradonačelnik Milan Bandić?",
+            "U Zagrebu",
+            "U Imotskom",
+            "U Hercegovini",
+            "U Zagorju",
+            3)
+
+        questionList.add(q10)
+
+        val q11 = Questions(
+            11,
+            "Koje se mjesto nalazi na Balkanskom poluotoku?",
+            "Dubrovnik",
+            "Kumrovec",
+            "Vukovar",
+            "Pula",
+            1)
+
+        questionList.add(q11)
+
+
+        val q12 = Questions(
+            12,
+            "Tko je bio kapetan reprezentacije Hrvatske na prvoj utakmici u Maksimiru protiv SAD-a?",
+            "Cico Kranjčar",
+            "Zoran Vulić",
+            "Marko Mlinarić",
+            "Davor Šuker",
+            1)
+
+        questionList.add(q12)
+
+        val q13 = Questions(
+            13,
+            "U kojoj su županiji Plitvička jezera?",
+            "Karlovačkoj",
+            "Zagorskoj",
+            "Ličko-senjskoj",
+            "Primorsko-goranskoj",
+            3)
+
+        questionList.add(q13)
+
+
+        val q14 = Questions(
+            14,
+            "Kako glasi službeni slogan Hrvatske turističke zajednice?",
+            "Mediteran kakav je nekada bio",
+            "Mala zemlja za veliki odmor",
+            "Najljepša zemlja, najpametniji ljudi",
+            "Zemlja 1000 otoka",
+            1)
+
+        questionList.add(q14)
+
+        val q15 = Questions(
+            15,
+            "Tko nije bio hrvatski premijer?",
+            "Josip Manolić",
+            "Vladimir Šeks",
+            "Zoran Milanović",
+            "Hrvoje Šarinić",
+            2)
+
+        questionList.add(q15)
+
+        val q16 = Questions(
+            16,
+            "Koga je kardinal Bozanić naslijedio na čelu Zagrebačke nadbiskupije?",
+            "kardinala Franju Kuharića",
+            "kardinala Vinka Puljića",
+            "kardinala Franju Šepera ",
+            "kardinala Alojzija Stepinca",
+            1)
+
+        questionList.add(q16)
+
+
+        val q17 = Questions(
+            17,
+            "Koji je političar bio premijer, predsjednik Sabora i predsjednik države?",
+            "Stipe Mesić",
+            "Ivo Sanader",
+            "Petar Čobanković",
+            "Zoran Milanović",
+            1)
+
+        questionList.add(q17)
 
         //objekt vraća listu
         return questionList

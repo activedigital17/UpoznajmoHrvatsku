@@ -26,6 +26,8 @@
         android:layout_height="wrap_content"
         android:background="@drawable/karta_hrvatske"
         android:layout_weight="1"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
         android:gravity="center"
         />
 
@@ -50,7 +52,7 @@
                 android:id="@+id/tv_description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="casual"
+                android:fontFamily="@font/roboto"
                 android:gravity="center"
 
                 android:text="@string/upi_i_svoje_ime"
@@ -68,10 +70,11 @@
                     android:id="@+id/et_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/ic_content_box"
+                    android:fontFamily="@font/roboto"
+
                     android:hint="@string/ime"
                     android:imeOptions="actionGo"
-
-                    android:background="@drawable/ic_content_box"
                     android:inputType="textCapWords"
                     android:textColor="#363A43"
                     android:textColorHint="#7A8089" />
@@ -84,9 +87,10 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginRight="50dp"
-                android:layout_marginBottom="30dp"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/ic_igraj_ponovno_button"
-                android:text="Igraj ponovno"
+                android:fontFamily="@font/roboto_bold"
+                android:text="Igraj"
                 android:textColor="@android:color/white"
                 android:textSize="18sp" />
 
@@ -98,9 +102,9 @@
         android:layout_height="wrap_content"
         android:background="@drawable/powered_by"
         android:contentDescription="@string/logo"
-        android:layout_weight="0.5"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_weight="0.4"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
 
         android:layout_marginBottom="10dp"
         />

@@ -32,7 +32,7 @@ class ResultActivity : AppCompatActivity() {
         }
 
 
-        correct_answers_display.text = "Tvoj rezultat je: $correctQuestions/$totalQuestions"
+        correct_answers_display.text = "$correctQuestions/$totalQuestions"
 
 
         highscore_tv.text = "${sharedPreference.getValueInt("highscore")}/$totalQuestions je tvoj najbolji rezultat, probaj ga sustići.  "

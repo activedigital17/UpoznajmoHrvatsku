@@ -25,6 +25,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_quiz_questions)
@@ -45,10 +46,13 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
         setQuestion()
 
+
         option_one.setOnClickListener(this)
         option_two.setOnClickListener(this)
         option_three.setOnClickListener(this)
         option_four.setOnClickListener(this)
+
+
         submit_btn.setOnClickListener(this)
 
 
@@ -65,6 +69,49 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
         }
     }
+
+
+    private fun answersNotClickable(){
+
+
+
+        val options = ArrayList<TextView>()
+        options.add(0,option_one)
+        options.add(1,option_two)
+        options.add(2, option_three)
+        options.add(3,option_four)
+
+
+        for (option in options){
+
+            option.isClickable = false
+
+        }
+
+    }
+
+
+
+    private fun answersClickable(){
+
+
+
+        val options = ArrayList<TextView>()
+        options.add(0,option_one)
+        options.add(1,option_two)
+        options.add(2, option_three)
+        options.add(3,option_four)
+
+
+        for (option in options){
+
+            option.isClickable = true
+
+        }
+
+    }
+
+
 
     override fun onClick(v: View?) {
 
@@ -85,12 +132,12 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                 if(mSelectedOptionPosition == 0){
                     mCurrentPosition++
 
+
                     when{
                         mCurrentPosition<=mQuestionList!!.size->{
                             setQuestion()
+                            answersClickable()
                         }else->{
-
-
 
                         val intent = Intent(this,ResultActivity::class.java)
                         intent.putExtra(Constants.TOTAL_QUESTIONS,mQuestionList!!.size )
@@ -109,11 +156,18 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                     }
                     answerView(question.correctAnswer,R.drawable.correct_options_bg)
 
+                    answersNotClickable()
+
+
                     if (mCurrentPosition == mQuestionList!!.size){
 
                         submit_btn.text = "ZAVRŠI"
+
+
+
                     } else {
                         submit_btn.text="SLJEDEĆE PITANJE"
+
                     }
                     mSelectedOptionPosition=0
                 }
@@ -146,6 +200,7 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         }else{
 
             submit_btn.text = "POTVRDI"
+
         }
 
         progress_bar.progress = mCurrentPosition
@@ -166,9 +221,10 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
         options.add(2, option_three)
         options.add(3,option_four)
 
+
         for (option in options){
 
-            option.setTextColor(Color.parseColor("#7fc5d8"))
+            option.setTextColor(Color.parseColor("#555555"))
             option.typeface = Typeface.DEFAULT
             option.background = ContextCompat.getDrawable(this,R.drawable.default_options_bg)
 

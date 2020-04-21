@@ -20,17 +20,17 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:layout_margin="5dp"
-            android:autoSizeTextType="uniform"
-            android:autoSizeMinTextSize="14sp"
             android:autoSizeMaxTextSize="28sp"
+            android:autoSizeMinTextSize="14sp"
             android:autoSizeStepGranularity="2sp"
-            android:fontFamily="casual"
-            android:gravity="center"
+            android:autoSizeTextType="uniform"
             android:background="@drawable/ic_question_box"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="Glavni grad Hrvatske"
             android:textColor="#555555"
             android:textStyle="bold"
-            tools:text="Glavni grad Hrvatske?"
-            android:text="Glavni grad Hrvatske"/>
+            tools:text="Glavni grad Hrvatske?" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -71,11 +71,12 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="@drawable/default_options_bg"
+            android:fontFamily="@font/roboto"
             android:gravity="center"
             android:padding="15dp"
-            android:textColor="#7fc5d8"
-            android:textSize="24sp"
             android:text="Zagreb"
+            android:textColor="#555555"
+            android:textSize="24sp"
             tools:text="Apple" />
 
         <TextView
@@ -84,11 +85,12 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="@drawable/default_options_bg"
+            android:fontFamily="@font/roboto"
             android:gravity="center"
             android:padding="15dp"
-            android:textColor="#7fc5d8"
-            android:textSize="24sp"
             android:text="Apple"
+            android:textColor="#555555"
+            android:textSize="24sp"
             tools:text="Apple" />
 
         <TextView
@@ -97,11 +99,12 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="@drawable/default_options_bg"
+            android:fontFamily="@font/roboto"
             android:gravity="center"
             android:padding="15dp"
-            android:textColor="#7fc5d8"
-            android:textSize="24sp"
             android:text="Zagreb"
+            android:textColor="#555555"
+            android:textSize="24sp"
             tools:text="Apple" />
 
         <TextView
@@ -110,21 +113,23 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="@drawable/default_options_bg"
+            android:fontFamily="@font/roboto"
             android:gravity="center"
             android:padding="15dp"
-            android:textColor="#7fc5d8"
-            android:textSize="24sp"
             android:text="Zagreb"
+            android:textColor="#555555"
+            android:textSize="24sp"
             tools:text="Apple" />
 
         <Button
+            android:id="@+id/submit_btn"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="35dp"
             android:background="@drawable/ic_potvrdi_button"
+            android:fontFamily="@font/roboto_bold"
             android:gravity="center"
             android:padding="10dp"
-            android:id="@+id/submit_btn"
             android:text="POTVRDI"
             android:textColor="@android:color/white"
             android:textSize="24sp"
