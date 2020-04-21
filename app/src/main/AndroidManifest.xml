@@ -9,14 +9,23 @@
         android:roundIcon="@mipmap/ikonica"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ResultActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/NoActionBarTheme">
+        <activity android:name=".SplashScreen"
+            android:theme="@style/NoActionBarTheme"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity
+            android:name=".ResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBarTheme"></activity>
         <activity
             android:name=".QuizQuestionsActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/NoActionBarTheme"></activity>
+            android:theme="@style/NoActionBarTheme" />
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait"
