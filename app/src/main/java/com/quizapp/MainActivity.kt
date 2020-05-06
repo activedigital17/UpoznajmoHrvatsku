@@ -9,6 +9,12 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+    companion object {
+
+        public var level:String? = null
+
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -24,8 +30,9 @@ class MainActivity : AppCompatActivity() {
                 Toast.makeText(this,"Ime nije uneseno!", Toast.LENGTH_LONG).show()
             } else{
                 //prijelaz na novi activity Quiz Questions
-                val intent = Intent(this,QuizQuestionsActivity::class.java)
+                val intent = Intent(this,SplashScreenLeveloneActivity::class.java)
                 startActivity(intent)
+                MainActivity.level = "one"
                 finish()
 
 

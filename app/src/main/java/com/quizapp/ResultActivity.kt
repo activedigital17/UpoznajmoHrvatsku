@@ -1,8 +1,6 @@
 package com.quizapp
 
-import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -19,11 +17,12 @@ class ResultActivity : AppCompatActivity() {
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_IMMERSIVE
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
 
-        val totalQuestions = intent.getIntExtra(Constants.TOTAL_QUESTIONS, 0)
-        val correctQuestions = intent.getIntExtra(Constants.CORRECT_ANSWERS, 0)
+        val totalQuestions = intent.getIntExtra(LevelOneQuestions.TOTAL_QUESTIONS, 0)
+        val correctQuestions = intent.getIntExtra(LevelOneQuestions.CORRECT_ANSWERS, 0)
 
 
         //spremanje highscorea
+        //treba ispraviti prikaz ukupnog po pojedinačnom aktivitiju
         val sharedPreference: com.quizapp.SharedPreferences = SharedPreferences(this)
 
         if (correctQuestions>sharedPreference.getValueInt("highscore")){
@@ -37,6 +36,17 @@ class ResultActivity : AppCompatActivity() {
 
         highscore_tv.text = "${sharedPreference.getValueInt("highscore")}/$totalQuestions je tvoj najbolji rezultat, probaj ga sustići.  "
 
+        if (correctQuestions > 1){
+
+
+            playAgain_btn.text = "Nastavi"
+            MainActivity.level = "two"
+        } else {
+
+            playAgain_btn.text ="Igraj Ponovno"
+            MainActivity.level = "one"
+        }
+
 
         resultFinish_btn.setOnClickListener() {
 
@@ -49,9 +59,21 @@ class ResultActivity : AppCompatActivity() {
 
         playAgain_btn.setOnClickListener() {
 
-            val intent = Intent(this, QuizQuestionsActivity::class.java)
-            startActivity(intent)
-            finish()
+
+            if(correctQuestions>1){
+
+                val intent = Intent(this, splash_screen_leveltwo::class.java)
+                startActivity(intent)
+                finish()
+
+
+            }else{
+                val intent = Intent(this, QuizQuestionsActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+
+
 
         }
 

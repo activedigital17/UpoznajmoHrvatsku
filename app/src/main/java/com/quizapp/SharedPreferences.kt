@@ -13,7 +13,7 @@ class SharedPreferences(val context:Context) {
 
         editor.putInt(KEY_NAME, value)
 
-        editor!!.commit()
+        editor.commit()
     }
 
     fun getValueInt(KEY_NAME: String): Int {

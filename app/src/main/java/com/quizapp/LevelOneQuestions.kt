@@ -2,13 +2,11 @@ package com.quizapp
 
 import android.util.Log
 
-object Constants{
+object LevelOneQuestions{
 
     //placeholderi koji se koriste kasnije u intentu tj prijalazu iz jednog na drugi
     const val TOTAL_QUESTIONS:String= "total_questions"
     const val CORRECT_ANSWERS:String = "correct_answers"
-
-
 
     fun getQuestions():ArrayList<Questions>{
 

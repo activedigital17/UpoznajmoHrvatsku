@@ -1,18 +1,14 @@
 package com.quizapp
 
-import android.content.Context
 import android.content.Intent
 import android.graphics.Color
-import android.graphics.LightingColorFilter
 import android.graphics.Typeface
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import kotlinx.android.synthetic.main.activity_quiz_questions.*
-import org.w3c.dom.Text
 
 
 class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
@@ -22,8 +18,9 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
     private var mSelectedOptionPosition:Int = 0
     private var mCorrectAnswers: Int = 0
 
-
-
+    //novo dodati konstante nove za nova pitanja
+    private var isLevelOne:Boolean = true
+    private var isLevelTwo:Boolean = false
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -41,7 +38,16 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
 
         //povlačimo sva pitanja
-        mQuestionList = Constants.getQuestions()
+
+        when(MainActivity.level){
+
+            "one"->mQuestionList = LevelOneQuestions.getQuestions()
+            "two"->mQuestionList = LevelTwoQuestions.getQuestions()
+            else ->{}
+        }
+
+
+
 
 
         setQuestion()
@@ -111,8 +117,6 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
 
     }
 
-
-
     override fun onClick(v: View?) {
 
         when(v?.id){
@@ -129,19 +133,21 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                 SelectedOptionView(option_four, 4)
             }
             R.id.submit_btn->{
+
                 if(mSelectedOptionPosition == 0){
                     mCurrentPosition++
-
-
                     when{
                         mCurrentPosition<=mQuestionList!!.size->{
-                            setQuestion()
-                            answersClickable()
+
+
+                                setQuestion()
+                                answersClickable()
+
                         }else->{
 
                         val intent = Intent(this,ResultActivity::class.java)
-                        intent.putExtra(Constants.TOTAL_QUESTIONS,mQuestionList!!.size )
-                        intent.putExtra(Constants.CORRECT_ANSWERS, mCorrectAnswers)
+                        intent.putExtra(LevelOneQuestions.TOTAL_QUESTIONS,mQuestionList!!.size )
+                        intent.putExtra(LevelOneQuestions.CORRECT_ANSWERS, mCorrectAnswers)
                         startActivity(intent)
                         finish()
                     }
@@ -162,8 +168,6 @@ class QuizQuestionsActivity : AppCompatActivity(), View.OnClickListener {
                     if (mCurrentPosition == mQuestionList!!.size){
 
                         submit_btn.text = "ZAVRŠI"
-
-
 
                     } else {
                         submit_btn.text="SLJEDEĆE PITANJE"
