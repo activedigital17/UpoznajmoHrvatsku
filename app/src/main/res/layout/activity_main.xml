@@ -19,6 +19,17 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <Button
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:id="@+id/factsBtn"
+        android:backgroundTint="#00B8D4"
+        android:fontFamily="@font/roboto_bold"
+        android:text="Jeste li znali?"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp" />
 
     <ImageView
         android:id="@+id/tv_app_name"
@@ -79,6 +90,8 @@
                     android:textColor="#363A43"
                     android:textColorHint="#7A8089" />
             </com.google.android.material.textfield.TextInputLayout>
+
+
 
             <Button
                 android:id="@+id/btn_start"

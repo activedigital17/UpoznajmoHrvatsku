@@ -38,9 +38,13 @@ class MainActivity : AppCompatActivity() {
 
             }
 
+        }
+
+        factsBtn.setOnClickListener{
 
 
-
+            val intent = Intent(this,Facts::class.java)
+            startActivity(intent)
 
         }
 

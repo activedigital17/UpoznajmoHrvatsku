@@ -37,7 +37,8 @@ dependencies {
     // This is used for material components
     implementation 'com.google.android.material:material:1.0.0'
     //END
-
+// Don't forget to add OkHttp dependency to make Web Services calls
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
     testImplementation 'junit:junit:4.13'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
