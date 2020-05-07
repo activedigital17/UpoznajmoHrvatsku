@@ -53,9 +53,11 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="377dp"
+        android:layout_width="0dp"
         android:layout_height="150dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.529"
@@ -63,4 +65,20 @@
         app:layout_constraintTop_toBottomOf="@+id/nextQuoteBtn"
         app:layout_constraintVertical_bias="0.17000002"
         app:srcCompat="@drawable/powered_by" />
+
+    <Button
+        android:id="@+id/shareBtn"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/shareicon"
+        app:layout_constraintBottom_toTopOf="@+id/nextQuoteBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.48000002" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

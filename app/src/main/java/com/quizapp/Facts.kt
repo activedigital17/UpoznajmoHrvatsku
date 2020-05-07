@@ -1,5 +1,6 @@
 package com.quizapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Html
@@ -26,6 +27,12 @@ class Facts : AppCompatActivity() {
             loadRandomFact()
         }
 
+        shareBtn.setOnClickListener {
+            shareFact()
+        }
+
+
+
     }
 
 
@@ -46,5 +53,22 @@ class Facts : AppCompatActivity() {
 
             }
         })
+    }
+
+
+    private fun shareFact(){
+
+        val dataFromQuoteView:String = quote_tv.text.toString()
+
+        val sendIntent:Intent = Intent().apply {
+            action=Intent.ACTION_SEND
+            putExtra(Intent.EXTRA_TEXT, dataFromQuoteView )
+            type="text/plain"
+
+        }
+
+        val shareIntent = Intent.createChooser(sendIntent,null)
+        startActivity(shareIntent)
+
     }
 }
