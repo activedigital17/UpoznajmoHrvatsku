@@ -11,7 +11,7 @@ import java.io.IOException
 
 class Facts : AppCompatActivity() {
 
-    val URL = "https://api.icndb.com/jokes/random"
+    val URL = "https://kvizapic.herokuapp.com/random"
     var okHttpClient:OkHttpClient = OkHttpClient()
 
 
@@ -35,12 +35,12 @@ class Facts : AppCompatActivity() {
         val request:Request=Request.Builder().url(URL).build()
         okHttpClient.newCall(request).enqueue(object:Callback{
             override fun onFailure(call: Call, e: IOException) {
-                TODO("Not yet implemented")
+                quote_tv.text = e.toString()
             }
 
             override fun onResponse(call: Call, response: Response) {
                 val json= response.body()?.string()
-                val txt=(JSONObject(json!!).getJSONObject("value").get("joke")).toString()
+                val txt=(JSONObject(json!!).get("fact").toString())
 
                 runOnUiThread { quote_tv.text = Html.fromHtml(txt) }
 
